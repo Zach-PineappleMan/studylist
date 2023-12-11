@@ -1,9 +1,19 @@
 # 基于sif的长文本分段
 
 ## 参考项目：
+
 <https://github.com/DeqianBai/Automatically-extract-news-person-speech/tree/master>
+ 
+项目步骤：
 
-
+1. 分句
+2. 句子依存分析
+   - 构建依存树
+   - 查找说话的实体和内容
+     - 查找说话实体：状中结构查找实体
+     - 获取实体说的话
+3. 根据句子相似度进行判断
+4. 低于某个阈值则判定为结束
 
 ## 改编后：
 将任意长文本进行分段。
