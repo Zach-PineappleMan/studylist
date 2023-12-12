@@ -3,19 +3,16 @@ from gensim.models import Word2Vec
 import jieba  # 用于中文分词
 
 
-# 清洗空值和只有数字的行
-def is_valid_text(text):
-    return text.strip() != '' and not text.isdigit()
-
 # 步骤 1: 读取 Excel 文件
 df = pd.read_excel('test.xlsx')
 
-# 选择多列
-columns = ['数据1', '数据2', '数据3']
-texts = df[columns].astype(str)
+# print(df.head())
+# print()
+# print(df.columns)
 
-texts['combined'] = texts.apply(lambda row: ' '.join(row), axis=1)
-texts = texts['combined'].apply(is_valid_text)
+# 选择多列
+columns = ['列1名', '列2名', '列12名','列9名']
+texts = df[columns].astype(str).apply(lambda row: ' '.join(row), axis=1)
 
 # 步骤 2: 预处理文本（例如，中文分词）
 sentences = [list(jieba.cut(text)) for text in texts]
