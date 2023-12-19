@@ -408,13 +408,7 @@ model_path = Word2Vec.load("./best/my_word2vec.model")
 stop_words = None
 model = SIFModel(model_path, stop_words)
 data = """
-没有痘痘 皮肤光滑的小秘密
-果然，不管春夏秋冬还是离不开烟酰胺精华液~用对烟酰胺，白成闪电不是梦!精华水质地温和，流动性很好，上脸冰冰凉凉的很好吸收，不会特别黏，很清爽。这款自然妍的烟酰胺还是高浓度的 还是院线产品 使用起来更加的放心 还省下了去美容院的小钱钱
-请和我一样经常长痘的宝看看这支祛痘宝藏叭!!浣颜凝胶还是我的痘肌同事给我推荐的
-刚好那段时间熬夜+上火、下巴和额头冒了好多痘就买了一支试试看
-连着用了几天太雷了!!
-痘痘跟打地鼠似的 瘪得贼快!小小一支出门带着也好方便
-爆痘的时候马上就能用它急救!丝毫不慌!我比较喜欢睡前用、涂完就去睡觉睡醒红痘能瘪好多连用几天就平了
+xxxxx
 """
 
 print(segment_paragraphs_by_similarity(data, model,similarity_threshold=0.4))
