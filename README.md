@@ -6,7 +6,7 @@
 | meta-transformer | https://github.com/invictus717/MetaTransformer/tree/master | 0       | 20231205 | 是     |   |
 | OneLLM           | https://github.com/csuhan/OneLLM/tree/main                 |  0      |  20231211| 是     |   |
 | LongChainKBQA     | https://github.com/wp931120/LongChainKBQA/tree/main        |    0   | 20231221  | 是    | |
-|                  |                                                            |         |          |       |   |
+|  Ai-edu   |  https://microsoft.github.io/ai-edu/                                 |  0   | 20231221|  是     |   |
 |                  |                                                            |         |          |       |   |
 |                  |                                                            |         |          |       |  |
 |                  |                                                            |         |          |       | |
