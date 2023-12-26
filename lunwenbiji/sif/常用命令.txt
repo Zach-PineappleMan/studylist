@@ -1,0 +1,388 @@
+
+
+source /etc/profile 更新配置文件
+================================检查OSS=================================
+read time out
+curl tarsocial-algorithm-services.oss-cn-shanghai.aliyuncs.com
+
+python -m http.server
+sz predict_pg.py
+===================================依赖包安装=================================== 
+-i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+pip config set global.index-url https://nexus.tarsocial.com/repository/aliyun-pypi-proxy/simple/ 
+pip config set install.trusted-host nexus.tarsocial.com
+
+pip install tensorflow==1.4 -i https://pypi.tuna.tsinghua.edu.cn/simple        -i https://mirrors.aliyun.com/pypi/simple
+pip install tensorflow-gpu==2.0.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip --default-timeout=500 install -U rasa==1.9.5  -i https://pypi.tuna.tsinghua.edu.cn/simple         # 修改timeout时间
+
+pip --default-timeout=1000 install tensorflow-gpu==1.15.0
+
+python -m pip install --upgrade pip
+pip install --use-feature=2020-resolver --upgrade aws-cdk.aws-sns-subscriptions
+
+生成文件
+pip freeze > requirements.txt
+依赖库会导到于requirements.txt
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install pipreqs -i https://pypi.douban.com/simple/
+
+pipreqs ./ --encoding=utf8 --pypi-server=https://pypi.douban.com/simple/  --print
+pipreqs ./ --encoding=utf8 --pypi-server=https://pypi.douban.com/simple/  > requirements.txt
+================================== pytorch安装 ==================================
+pytorch whl 安装包大全：https://download.pytorch.org/whl/torch/
+
+pip3 安装
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+https://download.pytorch.org/whl/cu113/torch-1.10.2%2Bcu113-cp36-cp36m-linux_x86_64.whl
+
+conda 虚拟环境安装
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/torch/torch-1.7.1+cu101-cp39-cp39-linux_x86_64.whl  ~/baidq/whl_file/
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/torch/torchaudio-0.7.2-cp39-cp39-linux_x86_64.whl  ~/baidq/whl_file/
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/torch/torchvision-0.8.2+cu101-cp39-cp39-linux_x86_64.whl  ~/baidq/whl_file/
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/libcudnn8-dev_8.2.1.32-1+cuda11.3_amd64.deb  ~/baidq/basefile
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/cudnn-11.2-linux-x64-v8.1.1.33.tgz  ~/baidq/basefile
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/model_best_v1.zip  ~/baidq/content_analyze_makeup/checkpoint/ 
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/temp/chinese-roberta-wwm-ext.zip  ~/baidq/comment_type/
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/temp/bert_classifier_epoch_4.pth  ~/baidq/comment_type/model/comment_emo/v2/
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/temp/bert_base_best_static_v11.pth  ~/baidq/emotion/dy_comment_emo_dev/model/finetune_emo/v11/
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/temp/bert_base_best_static_v11.pth  ~/baidq/fc/ts_emotion/checkpoint/finetune_emo/
+
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/temp/bert_classifier_static_dict_epoch_7.pth  ~/baidq/emotion/ysl_base/finetune/
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/202202/content_analyze_makeup.zip  ~/baidq/
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/base/kg_data_v2.zip  ~/baidq/ie_base/
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/base/ysl_base_dev.zip  ~/baidq/emotion/
+
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/emo_relation.zip  ~/baidq/
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/bie_fintune.zip  ~/baidq/
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/baidq/base/bert_model.onnx  ~/baidq/triton_dev/model_repository/model_v1/1/
+
+pytorch-1.7.1	|	py3.7_cuda10.1.243_cudnn7.6.3_0       	552.8 MB  pytorch
+torchaudio-0.7.2	|             	py37         			9.9 MB  pytorch
+torchvision-0.8.2	|       	py37_cu101        			17.9 MB  pytorch
+
+>>> import torch
+>>> torch.cuda.is_available()
+True
+
+参考：
+https://cloud.tencent.com/developer/article/1781733
+==================================文件移动压缩==================================
+压缩zip	zip -r fact_classification.zip fact_classification/	 zip -r model_best_v2.zip model_best/     
+
+zip -r model_best_v11_temp.zip model_best/
+zip -r model_best_v18.zip model_best/
+
+zip -r model_best_v12-1.zip model_best/
+zip -r ca_demo_v1.zip ca_demo_v1/
+
+zip -r uie_finetune.zip uie_finetune/
+zip -r 20220820_part2.zip 20220820/
+zip -r 20221125.zip  20221125/
+
+zip -r /tmp/HA.zip  /tmp/HA/
+zip -r emotion-classification-gpu-so.zip emotion-classification-gpu-so/
+
+zip -r d2v11.zip d2v11/
+
+解压zip
+unzip fact_classification.zip  
+unzip -O gb18030  
+
+conda activate torch39
+nohup python -u main.py > nohup_emo_v8.out 2>&1 &
+cat nohup_emo_v8.out 
+
+mv  /tmp/online2.zip  ~/baidq/
+
+堡垒机删除文件
+1、先移动到 	tmp/temp：mv online2/  /tmp/temp/
+2、再删除		rm -rf /tmp/online/
+
+rm -f bert_classifier_epoch_1.pth 可以用， -r 不可以用
+
+# 复制文件夹下的所有文件，需要提前建一个同名空文件夹
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/deep_learning/  ~/baidq/ --recursive    
+
+ossutil64 -c /tmp/.ossconfig cp oss://ai-transfer/data.zip  ~/baidq/ysl_emotion/data/
+
+# 后台运行 : https://blog.csdn.net/lipengfei0427/article/details/107514049
+nohup python -u main.py > robert.out 2>&1 &
+nohup python -u main.py > nohup_emo_v11.out 2>&1 &
+nohup python -u main_red.py > nohup_red_v7.out 2>&1 &
+
+nohup python -u main_v5.py > nohup_v5.out 2>&1 &
+nohup python -u nickname_v3.py  > nohup_v3.out 2>&1 &
+
+nohup python -u train_bert_prompt.py > nohup.out 2>&1 &
+nohup python -u run_demo_server.py > nohup.out 2>&1 &
+
+nohup python -u evaluate_local.py > test14.out 2>&1 &
+
+nohup python -u 03.py > dev.out 2>&1 &
+
+nohup python -u distil4bert_L4.py  > L4.out 2>&1 &
+nohup python -u main_distil.py > nohup.out 2>&1 &
+nohup python -u finetune.py  --train_path "./data/train.txt" --dev_path "./data/dev.txt" --save_dir "./checkpoint"    --batch_size 8  --model "uie-base"  --device "gpu"  > nohup.out 2>&1 &
+nohup python -u run.py --model FastText --embedding random > nohup.out 2>&1 &
+
+nohup python -u comment_main.py > nohup.out 2>&1 &
+
+nohup python -u main_select.py > nohup.out 2>&1 &
+nohup python -u run_server.py > nohup.out 2>&1 &
+
+nohup python -u predict.py > nohup.out 2>&1 &
+nohup python -u evaluate_local_online.py --label 香味  > xiangwei.out 2>&1 &
+
+nohup python -u app.py > nohup.out 2>&1 &
+
+nohup python -u run_social_emotion.py > nohup.out 2>&1 &
+
+nohup python -u onepredict_v1.py > nohup.out 2>&1 &
+
+nohup python -u comment_emotion_cla.py > nohup.out 2>&1 &
+nohup python -u douyin_comment_server_v2.py  > nohup.out 2>&1 &
+nohup python -u douyin_comment_server.py  > nohup.out 2>&1 &
+nohup python -u main_v3.py > nohup.out 2>&1 &
+nohup python -u kafka_service.py >> nohup.out 2>&1 &
+
+nohup python -u inference_v2.py > infnohup.out 2>&1 &
+nohup python -u prelabel2.py > prenohup2.out 2>&1 &
+
+api_version=(1,3,5)
+
+ps -ef|grep python
+kill -9 进程序号
+
+# 利用tail命令查看日志内容：
+tail -f nohup.out
+
+将194的文件拉取至目标机器(在目标机器的目标路径下执行)：
+scp root@10.88.40.194:/home/baidq/my_v201.tar ./
+scp root@172.30.7.15:~/baidq/distil_emotion.zip ./
+scp root@172.30.7.12:~/baidq/uie_finetune/data/v6.zip ./
+scp root@10.0.7.5:~/baidq/comment_type/model/comment_emo/v11/bert_base_best_model.pth ./
+scp root@10.0.7.12:~/baidq/comment_type/model/comment_emo/v11/bert_base_best_static_v11.pth ./
+scp root@10.0.7.12:~/Miniconda3-py37_4.10.3-Linux-x86_64.sh ./
+scp root@10.0.7.81:/hjb/kg_entity_relation/checkpoint/model_best/d1v3/checkpoint-6000.zip ./
+``
+
+==================================创建虚拟环境===================================
+查看conda 配置
+conda config --show
+添加清华源
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+使用conda 安装时去掉-c pytorch，安装的时候才会默认从清华源下载相应的包
+
+
+===================================docker相关===================================
+1. 进入容器：  docker exec -ti dialogue_2.0 bash
+2. 容器内查看带python字段进程：  ps -ef|grep python
+3. 杀掉进程：kill -9  进程代码
+4. 停服务： docker stop  dialogue_2.0
+5. 删容器：docker rm dialogue_2.0
+6.查看当前容器里的进程: docker top 容器名字
+7.docker rmi 镜像的id 删除镜像
+
+压缩镜像至tar包：
+docker save -o my_v201.tar registry.szcasic.com/rasa/rasa_base:v2.0.1
+docker save -o nlp_plat.tar nlp_paltform_service:v1 
+docker save -o cla_ser.tar cla_ser:v1 
+
+解压缩镜像：
+docker load -i my_v201.tar
+docker load -i cla_ser.tar
+docker load -i text_seg.tar
+
+===================================docker 部署相关===================================
+堡垒机上容器内的 IP 要写成 0.0.0.0
+https://hub.docker.com/r/pytorch/pytorch/tags?page=1
+
+===================================CUDA相关===================================
+lspci | grep -i nvidia  查看显卡型号 http://pci-ids.ucw.cz/mods/PC/10de?action=help?help=pci
+
+172.30.7.12 单张 GTX2080Ti：
+CUDA:10.2
+cudnn：7.6
+Compute Capability: 7.5
+
+172.30.7.5 单张 ATX6000：
+CUDA:11.2
+cudnn：8.1
+Compute Capability: 8.6
+
+172.30.7.11 四张 GTX2080Ti：
+CUDA:10.2
+cudnn： 7.6
+
+
+lspci | grep -i vga
+lsb_release -a      查看操作系统
+
+import paddle
+paddle.utils.install_check.run_check() 看看 paddle 环境
+
+
+export LD_LIBRARY_PATH='/root/anaconda3/envs/torch/lib/'
+export LD_LIBRARY_PATH=/root/anaconda3/pkgs/pytorch-1.10.0-py3.8_cuda11.3_cudnn8.2.0_0/lib/'
+
+Please make sure that
+ -   PATH includes /usr/local/cuda-11.2/bin
+ -   LD_LIBRARY_PATH includes /usr/local/cuda-11.2/lib64, or, add /usr/local/cuda-11.2/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-11.2/bin
+
+sudo gedit ~/.bashrc    /   sudo nano  ~/.bashrc
+
+export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+source ~/.bashrc
+nvcc -V
+================================CUDA docker相关==================================
+NVIDIA 镜像大全
+https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/supported-tags.md
+
+Ubuntu 18.04 
+docker pull nvidia/cuda:11.4.0-cudnn8-devel-ubuntu18.04
+docker run -it --name trt_test --gpus all -v /home/tensorrt:/tensorrt nvidia/cuda:11.4.0-cudnn8-devel-ubuntu18.04 /bin/bash
+docker run -it --name uie_v1 --gpus all -v ~/baidq/uie_finetune:/uie_finetune nvidia/cuda:11.4.0-cudnn8-devel-ubuntu18.04 /bin/bash  --env LC_ALL=C.UTF-8
+
+docker pull nvidia/cuda:11.6.0-cudnn8-devel-ubuntu18.04
+docker run -it --name uie_v2 --gpus all -v ~/baidq/uie_finetune:/uie_finetune nvidia/cuda:11.6.0-cudnn8-devel-ubuntu18.04 /bin/bash  --env LC_ALL=C.UTF-8
+====================================paddle docker ====================================================================
+docker pull paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6
+docker pull registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8
+docker run -it --name uie_v3 --runtime=nvidia -v ~/baidq/uie_finetune:/uie_finetune -p 8888:8888  paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 /bin/bash
+
+docker run -it --name ca_demo_v1 --runtime=nvidia -v ~/baidq/ca_demo_v1:/ca_demo -p 8881:8888  paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 /bin/bash
+docker run -it --name ca_demo_v1 --runtime=nvidia -v ~/baidq/ca_demo_v1:/ca_demo -p 8881:8888  paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 python run_demo_server.py
+
+docker run -it --name ca_demo_v2 --runtime=nvidia -v ~/baidq/ca_demo_v2:/ca_demo -p 8882:8888  paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 /bin/bash
+docker run -it --name ca_demo_v3 --runtime=nvidia -v ~/baidq/ca_demo_v3:/ca_demo -p 8883:8888  paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 /bin/bash
+
+docker run -it --name pg_gs --runtime=nvidia -v ~/baidq/pg_gs:/pg_gs   paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 /bin/bash
+docker run -it --name pg_gs_v2 --runtime=nvidia -v ~/baidq/pg_gs_v2/pg_gs:/pg_gs   paddlecloud/paddlenlp:develop-gpu-cuda11.2-cudnn8-5ee1c6 /bin/bash
+docker run -it --name pg_gs_v2_demo --runtime=nvidia -v ~/baidq/pg_gs_v2_demo:/pg_gs  -p 8005:8888  registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 /bin/bash
+
+nvidia-docker run --name paddle -it -v $PWD:/paddle registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 /bin/bash
+nvidia-docker run --name content_analyze_mix -it -v ~/baidq/content_analyze_mix:/content_analyze_mix registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 /bin/bash
+
+yum install -y nvidia-docker2
+docker run -it --name ca_makeup_v1 --runtime=nvidia -v ~/baidq/ca_makeup_v1:/ca_makeup_v1 -p 8004:8888  registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 /bin/bash
+curl 
+
+
+docker run -it  --name skincare_demo  --runtime=nvidia  -v ~/baidq/content_analyze_skincare:/ie_skincare  -p 8003:8888  registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 /bin/bash
+
+docker run -it  --name makeup_demo  --runtime=nvidia  -v ~/baidq/content_analyze_makeup:/ie_makeup  -p 8004:8888  registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 /bin/bash
+
+pip config set global.index-url https://nexus.tarsocial.com/repository/aliyun-pypi-proxy/simple/ 
+pip config set install.trusted-host nexus.tarsocial.com
+
+ctrl+p+q
+pip install pandas -i https://mirrors.aliyun.com/pypi/simple
+pip install loguru -i https://mirrors.aliyun.com/pypi/simple
+pip install arrow -i https://mirrors.aliyun.com/pypi/simple
+pip install elasticsearch==7.8.0 -i https://mirrors.aliyun.com/pypi/simple
+pip install cython  -i https://mirrors.aliyun.com/pypi/simple
+pip install xlsxwriter -i https://mirrors.aliyun.com/pypi/simple
+pip  install openpyxl  -i https://mirrors.aliyun.com/pypi/simple
+pip install fast-tokenizer-python 
+pip install onnxruntime-gpu onnx onnxconverter-common
+pip install paddlenlp==2.5.2
+pip install typing-extensions==4.7.1
+使用registry.baidubce.com/paddlepaddle/paddle:2.3.1-gpu-cuda11.2-cudnn8 镜像还需要执行以下命令
+pip install --upgrade paddlenlp>=2.0.0rc -i https://pypi.org/simple
+
+======================================pytorch docker==============================
+pytorch cuda 镜像列表：https://hub.docker.com/r/pytorch/pytorch/tags
+
+docker pull pytorch/pytorch:1.7.1-cuda11.0-cudnn8-devel
+docker run -it --name cla_test --gpus all -v ~/baidq/emotion-classification-gpu:/emotion-classification-gpu pytorch/pytorch:1.7.1-cuda11.0-cudnn8-devel
+
+curl -X POST  -d '{"post_id": "7101933310858906892","mode": "demo"}' "http://172.30.7.12:8881/Analyze"
+curl -X POST  -d '{"post_id": "7101933310858906892","mode": "demo"}' "http://127.0.0.1:8881/Analyze"
+curl -X POST  -d '{"post_id": "7101933310858906892"}' "http://10.0.7.12:8881/Analyze"
+
+curl -X POST  -d '{"text": ["亲测对黄皮没用,肤色粉底根本不显色,画重了又显脏"],"model_type":"dy_emo_batch"}' "http://127.0.0.1:8000/social/emo_inf_v2"
+
+
+https://blog.csdn.net/weixin_44415928/article/details/110354304
+
+CentOS 7:
+docker pull nvidia/cuda:11.4.0-cudnn8-devel-centos7
+docker run -it --name cla_test --gpus all -v ~/baidq/online:/online nvidia/cuda:11.4.0-cudnn8-devel-centos7
+
+docker pull nvidia/cuda:11.4.3-cudnn8-devel-centos7
+docker run -it --name content_analyze_v1 --gpus all -v ~/baidq/ca_online:/ca_online nvidia/cuda:11.4.3-cudnn8-devel-centos7  --env LC_ALL=en_US.UTF-8
+
+
+-e export LANG="C.UTF-8"
+-e export LANG="zh_CN.UTF-8"
+
+临时方案
+locale -a
+echo 'export LANG="en_US.utf8"' >> /etc/profile
+source /etc/profile
+
+
+echo 'export LANG="C.UTF-8"' >> /etc/profile
+source /etc/profile
+
+apt-get update 
+apt-get install sudo
+
+sudo apt-get install software-properties-common
+sudo apt-get update
+
+sudo add-apt-repository universe
+sudo apt-get update
+
+apt-get install -y --no-install-recommends \
+python3 \
+python3-pip \
+python3-dev \
+python3-wheel &&\
+cd /usr/local/bin &&\
+ln -s /usr/bin/python3 python &&\
+ln -s /usr/bin/pip3 pip;
+
+pip install --upgrade pip
+
+
+yum install -y  \
+python3 \
+python3-pip \
+python3-dev \
+python3-wheel &&\
+cd /usr/local/bin &&\
+ln -s /usr/bin/python3 python &&\
+ln -s /usr/bin/pip3 pip;
+
+
+yum install cmake
+#yum install python3-devel
+#pip3 install cmake -i https://mirrors.aliyun.com/pypi/simple
+pip install -U psutil  -i https://mirrors.aliyun.com/pypi/simple
+pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple
+pip install -U setuptools -i https://mirrors.aliyun.com/pypi/simple
+# pip install  protobuf-compiler  -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -r requirements_gpu.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+https://blog.csdn.net/liuliangcan/article/details/125388222
+===================================接口相关===================================
