@@ -41,7 +41,62 @@
 
 1. 分句（不变）
 2. 进行编码（SIF方法）
-3. 需要进行比较（从上述方案中找到方法并使用sif方法进行比较）
-...？？？想不通
+3. 利用规则去划分：
+
+```python
+def segment_paragraphs_by_similarity(text, model, similarity_threshold=0.6):
+    global global_call_count
+    global_call_count += 1
+    if global_call_count % 100 == 0:
+        print(f"已处理 {global_call_count} 条数据")
+
+    sentences = split_into_sentences_v2(text)
+    # print("---------")
+    # print(sentences)
+    len_s = len(sentences)
+    if len_s < 2:
+        # print("ok")
+        return ''
+    # 标题
+    # current_paragraph = [sentences[0]]
+    paragraphs = []
+    # paragraphs.append(' '.join(current_paragraph))
+    # 正式内容
+    current_paragraph = [sentences[0]]
+    # 每个都会被看一遍
+    for i in range(1,len_s):
+        # 计算当前句子与当前段落中段末的相似度
+        sim_with_last = model.sentence_similarity(sentences[i], current_paragraph[-1])
+
+        # 计算当前句子与当前段落中段首的相似度
+        sim_with_first = model.sentence_similarity(sentences[i], current_paragraph[0])
+        # 计算当前句子与当下一句的相似性
+        if i<len_s-1:
+            sim_with_next = model.sentence_similarity(sentences[i], sentences[i+1])
+        else:
+            sim_with_next = 0
+
+        print(sim_with_first,sim_with_last,sim_with_next)
+
+        # 判断逻辑:与段首或上一句的一致性最好
+        if (sim_with_first>sim_with_last and sim_with_first>sim_with_next) or sim_with_last>sim_with_next :
+            current_paragraph.append(sentences[i])
+        # 如果与下一段最相似,则开启新的一段
+        elif sim_with_last >= similarity_threshold:
+
+            current_paragraph.append(sentences[i])
+        else:
+            # 当前句子与下一句更相似，结束当前段落，开始新段落
+            paragraphs.append(''.join(current_paragraph))
+            current_paragraph = [sentences[i]]
+
+    paragraphs.append(''.join(current_paragraph))
+    # print(paragraphs[-1])
+    paragraphs_str = '\n'.join(paragraphs)
+
+    return paragraphs_str
+```
 
 6. 进行输出
+
+
