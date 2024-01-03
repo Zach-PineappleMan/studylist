@@ -100,3 +100,5 @@ def segment_paragraphs_by_similarity(text, model, similarity_threshold=0.6):
 6. 进行输出
 
 
+经过实验，好消息是有点效果，坏消息是效果不符合期望，且6万条数据也没有很好的提升。
+
