@@ -102,3 +102,6 @@ def segment_paragraphs_by_similarity(text, model, similarity_threshold=0.6):
 
 经过实验，好消息是有点效果，坏消息是效果不符合期望，且6万条数据也没有很好的提升。
 
+采用方案2：sentence transformer的方案，在判断逻辑上增加如果与段落开头、上一句、下一句的相似度都“极低” 例如0.1 则，这个句子可以单独为一段。
+
+或者方案3：一直没有采用句子依存关系的方案，一个是自己没学，一个是暂时没找到现成的项目。
