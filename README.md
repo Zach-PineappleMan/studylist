@@ -8,7 +8,7 @@
 | LongChainKBQA     | https://github.com/wp931120/LongChainKBQA/tree/main        |    0   | 20231221  | 是    | |
 |  Ai-edu   |  https://microsoft.github.io/ai-edu/                                 |  0   | 20231221|  是     |   |
 |   sentence-transformers(之m3e)   |   https://github.com/wangyuxinwhy/uniem    |     0    | 20231228   | 是   |   |
-|                  |                                                            |         |          |       |  |
+| Intent Learning（意图识别）  |    尚未找到      | 0        |   20240112   |     否|  |
 |                  |                                                            |         |          |       | |
 |                  |                                                            |         |          |       | |
 
