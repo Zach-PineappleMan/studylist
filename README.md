@@ -9,7 +9,7 @@
 |  Ai-edu   |  https://microsoft.github.io/ai-edu/                                 |  0   | 20231221|  是     |   |
 |   sentence-transformers(之m3e)   |   https://github.com/wangyuxinwhy/uniem    |     0    | 20231228   | 是   |   |
 | Intent Learning（意图识别）  |    尚未找到      | 0        |   20240112   |     否|  |
-|                  |                                                            |         |          |       | |
+|  lang2sql   |     https://github.com/RamiKrispin/lang2sql  |   0      | 20230115    |   是    | |
 |                  |                                                            |         |          |       | |
 
 # 番外
