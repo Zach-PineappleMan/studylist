@@ -10,7 +10,7 @@
 |   sentence-transformers(之m3e)   |   https://github.com/wangyuxinwhy/uniem    |     0    | 20231228   | 是   |   |
 | Intent Learning（意图识别）  |    尚未找到      | 0        |   20240112   |     否|  |
 |  lang2sql   |     https://github.com/RamiKrispin/lang2sql  |   0      | 20230115    |   是    | |
-|                  |                                                            |         |          |       | |
+|   DyFSS        |https://github.com/q086/DyFSS/tree/master                |  0    | 20230116   |   否  | |
 
 # 番外
 
