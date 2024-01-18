@@ -11,7 +11,10 @@
 | Intent Learning（意图识别）  |    尚未找到      | 0        |   20240112   |     否|  |
 |  lang2sql   |     https://github.com/RamiKrispin/lang2sql  |   0      | 20230115    |   是    | |
 |   DyFSS        |https://github.com/q086/DyFSS/tree/master                |  0    | 20230116   |   否  | |
-
+|   SQL-GPT    | https://github.com/CL-lau/SQL-GPT     |  0    | 20230118   |   是  | |
+|   snowChat   | https://github.com/kaarthik108/snowChat             |  0    | 20230118   |   是  | |
+|  Natural Language to SQL   |[Natural Language to SQL ](https://medium.com/dataherald/fine-tuning-gpt-3-5-turbo-for-natural-language-to-sql-4445c1d37f7c)             |  0    | 20230118   |   是  | |
+|   dataherald        |https://github.com/Dataherald/dataherald               |  0    | 20230118   |   是  | |
 # 番外
 
 20240111 发现苏剑林搭建了:https://papers.cool/ 这个网站，真开心，每天能刷100个abstract的感觉真开心呀！
