@@ -15,6 +15,13 @@
 |   snowChat   | https://github.com/kaarthik108/snowChat             |  0    | 20230118   |   是  | |
 |  Natural Language to SQL   |[Natural Language to SQL ](https://medium.com/dataherald/fine-tuning-gpt-3-5-turbo-for-natural-language-to-sql-4445c1d37f7c)             |  0    | 20230118   |   是  | |
 |   dataherald        |https://github.com/Dataherald/dataherald               |  0    | 20230118   |   是  | |
+|   sqlcoder        |https://github.com/defog-ai/sqlcoder        |  0    | 20230118   |   是  | |
+|   SQL Genius   |[SQL Genius](https://sqlgenius.app/?continueFlag=061684c79f7db7318d778e88d5acfc6e)       |  0    | 20230118   |   是  | |
+|   sqlcoder        |https://github.com/defog-ai/sqlcoder        |  0    | 20230118   |   是  | |
+|   ChatSQL        |https://github.com/cubenlp/ChatSQL  |  0    | 20230118   |   是  | |
+|   talktosql        |http://github.com/woniesong92/talktosql  |  0    | 20230118   |   是  | |
+
+
 # 番外
 
 20240111 发现苏剑林搭建了:https://papers.cool/ 这个网站，真开心，每天能刷100个abstract的感觉真开心呀！
