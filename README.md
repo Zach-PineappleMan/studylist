@@ -10,9 +10,7 @@
 |   sentence-transformers(之m3e)   |   https://github.com/wangyuxinwhy/uniem    |     0    | 20231228   | 是   |   |
 | Intent Learning（意图识别）  |    尚未找到      | 0        |   20240112   |     否|  |
 | 意图识别  |  https://github.com/thuiar/TEXTOIR  | 0        |   20240123   | 是|  |
-|  lang2sql   |     https://github.com/RamiKrispin/lang2sql  |   100      | 20240115    |   否    | 通过prompt对数据库提问，做了一些提升和适应，去除了csv，直接访问数据库了 见studylist/projects
-/sql_twice/
-|
+|  lang2sql   |     https://github.com/RamiKrispin/lang2sql  |   100      | 20240115    |   否    | 通过prompt对数据库提问，做了一些提升和适应，去除了csv，直接访问数据库了 见studylist/projects/sql_twice/|
 |   DyFSS        |https://github.com/q086/DyFSS/tree/master                |  0    | 20240116   |   否  | |
 |   SQL-GPT    | https://github.com/CL-lau/SQL-GPT     |  0    | 20240118   |   是  | |
 |   snowChat   | https://github.com/kaarthik108/snowChat             |  0    | 20240118   |   是  | |
