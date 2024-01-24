@@ -2,7 +2,7 @@
 
 | 项目名称             | 链接                                                         | 学习进度(%) | 开始时间     | 是否还在学 |学习笔记链接|
 |------------------|------------------------------------------------------------|---------|----------|-------|-------|
-| SIF              | https://github.com/PrincetonML/SIF/tree/master             | 100    | 20231205 | 是     |  内容已完成，任务效果不理想|
+| SIF              | https://github.com/PrincetonML/SIF/tree/master             | 100    | 20231205 | 是     |  内容已完成，任务效果不理想，仍需努力见：studylist/lunwenbiji/sif/ |
 | meta-transformer | https://github.com/invictus717/MetaTransformer/tree/master | 1       | 20231205 | 是     |   |
 | OneLLM           | https://github.com/csuhan/OneLLM/tree/main                 |  0      |  20231211| 是     |   |
 | LongChainKBQA     | https://github.com/wp931120/LongChainKBQA/tree/main        |    0   | 20231221  | 是    | |
