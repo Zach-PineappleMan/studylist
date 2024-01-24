@@ -22,7 +22,8 @@
 |   ChatSQL        |https://github.com/cubenlp/ChatSQL  |  0    | 20240118   |   是  | |
 |   talktosql        |http://github.com/woniesong92/talktosql  |  0    | 20240118   |   是  | |
 |   sqlchat        |https://github.com/sqlchat/sqlchat|  0    | 20240118   |   是  | |
-
+|   nllb        |  https://github.com/facebookresearch/fairseq/tree/nllb|  0    | 20240124   |   是  | |
+|   GPT-SoVITS |  https://github.com/RVC-Boss/GPT-SoVITS|  0    | 20240124   |   否  | |
 
 # 番外
 
