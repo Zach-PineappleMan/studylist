@@ -24,6 +24,7 @@
 |   sqlchat        |https://github.com/sqlchat/sqlchat|  0    | 20240118   |   是  | |
 |   nllb        |  https://github.com/facebookresearch/fairseq/tree/nllb|  0    | 20240124   |   是  | |
 |   GPT-SoVITS |  https://github.com/RVC-Boss/GPT-SoVITS|  0    | 20240124   |   否  | |
+|   chain-of-knowledge | https://github.com/DAMO-NLP-SG/chain-of-knowledge|  0    | 20240126   |  是 | |
 
 # 番外
 
