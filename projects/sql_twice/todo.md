@@ -7,3 +7,6 @@
 # 如何进行案例添加和删除来不断提升水平
 
 ![image](https://github.com/Zach-PineappleMan/studylist/assets/56019563/124737fd-e81f-4ce7-89bd-6a942fbf094d)
+
+# 更新：
+20240130 解决了上下文的问题，完成了提问失败的重新提问
