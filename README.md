@@ -2,6 +2,7 @@
 
 | 项目名称             | 链接                                                         | 学习进度(%) | 开始时间     | 是否还在学 |学习笔记链接|
 |------------------|------------------------------------------------------------|---------|----------|-------|-------|
+| paddleNLP/NER | https://paddlenlp.readthedocs.io/zh/latest/data_prepare/overview.html | 100 | 之前|  是 | 已经能自主训练实体、关系的抽取|
 | SIF              | https://github.com/PrincetonML/SIF/tree/master             | 100    | 20231205 | 是     |  内容已完成，任务效果不理想，仍需努力见：studylist/lunwenbiji/sif/ |
 | meta-transformer | https://github.com/invictus717/MetaTransformer/tree/master | 1       | 20231205 | 是     |   |
 | OneLLM           | https://github.com/csuhan/OneLLM/tree/main                 |  0      |  20231211| 是     |   |
