@@ -28,10 +28,9 @@
 |   chain-of-knowledge | https://github.com/DAMO-NLP-SG/chain-of-knowledge|  0    | 20240126   |  是 | |
 |  fastapi | fastapi框架迅速学习一下 |  0    | 20240207   |  是 | 用于做项目后端，代码完全版本见:  studylist/projects/sql_twice/web位置，将原始的终端展示改为了网页展示|
 |  ~~vue~~ | ~~前端框架迅速学习一下~~ |  ~~0~~    | ~~20240207~~   |  否 | ~~用于做项目前端~~|
-| gradio | 自动页面生成学习一下 https://zhuanlan.zhihu.com/p/627099870 | 0 | 20240218|  是| 用于做功能展示|
+| gradio | 自动页面生成学习一下 https://zhuanlan.zhihu.com/p/627099870 | 0 | 20240218| 否| 用于做功能展示|
 | knowledge+llm | https://github.com/Zach-PineappleMan/KG-LLM-Papers | 0 | 20240305|  是| 用于探索与创新|
-
-
+| streamlit | 自动页面生成学习一下 | 5 | 20240312| 是| 用于做功能展示|
 # 番外
 
 20240111 发现苏剑林搭建了:https://papers.cool/ 这个网站，真开心，每天能刷100个abstract的感觉真开心呀！
