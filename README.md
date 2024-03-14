@@ -2,7 +2,7 @@
 
 | 项目名称             | 链接                                                         | 学习进度(%) | 开始时间     | 是否还在学 |学习笔记链接|
 |------------------|------------------------------------------------------------|---------|----------|-------|-------|
-| paddleNLP/NER | https://paddlenlp.readthedocs.io/zh/latest/data_prepare/overview.html | 100 | 之前|  是 | 已经能自主训练实体、关系的抽取|
+| paddleNLP/NER | https://paddlenlp.readthedocs.io/zh/latest/data_prepare/overview.html | 30 | 之前|  否 | 已经能自主训练实体、关系的抽取，其他相关功能和范式都有所了解|
 | SIF              | https://github.com/PrincetonML/SIF/tree/master             | 100    | 20231205 | 是     |  内容已完成，任务效果不理想，仍需努力见：studylist/lunwenbiji/sif/ |
 | meta-transformer | https://github.com/invictus717/MetaTransformer/tree/master | 1       | 20231205 | 是     |   |
 | OneLLM           | https://github.com/csuhan/OneLLM/tree/main                 |  0      |  20231211| 是     |   |
@@ -30,11 +30,9 @@
 |  ~~vue~~ | ~~前端框架迅速学习一下~~ |  ~~0~~    | ~~20240207~~   |  否 | ~~用于做项目前端~~|
 | gradio | 自动页面生成学习一下 https://zhuanlan.zhihu.com/p/627099870 | 0 | 20240218| 否| 用于做功能展示|
 | knowledge+llm | https://github.com/Zach-PineappleMan/KG-LLM-Papers | 0 | 20240305|  是| 用于探索与创新|
-| streamlit | 自动页面生成学习一下 | 5 | 20240312| 是| 用于做功能展示|
+| streamlit | https://zhuanlan.zhihu.com/p/670124993 | 15 | 20240312| 是| 用于做功能展，见studylist/projects/streamlit_project|
+| 扫描版pdf读取的10种方式与感悟 | https://blog.csdn.net/weixin_45934622/article/details/130845137 |100  | 用于获取文本数据| 否|见studylist/projects/streamlit_project |
+
 # 番外
 
 20240111 发现苏剑林搭建了:https://papers.cool/ 这个网站，真开心，每天能刷100个abstract的感觉真开心呀！
-
-~~20240204 哎呀，爱上了一个可爱的小姑娘，我一定会给她幸福的生活！（今天把她哄睡着了，想着得加把劲儿，熬夜学会儿）~~
-
-~~20240223 可爱小姑娘没了~~
