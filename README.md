@@ -32,7 +32,8 @@
 | knowledge+llm | https://github.com/Zach-PineappleMan/KG-LLM-Papers | 0 | 20240305|  是| 用于探索与创新|
 | streamlit | https://zhuanlan.zhihu.com/p/670124993 | 15 | 20240312| 是| 用于做功能展，见studylist/projects/streamlit_project（补：是后续所有项目，都会以该界面进行展示）|
 | 扫描版pdf读取的10种方式与感悟 | https://blog.csdn.net/weixin_45934622/article/details/130845137 |20230314 | 用于获取文本数据| 是|见studylist/projects/read_pdf |
-| chat4question | - |20230325 | 用于进行题库扩充| 是 |见studylist/projects/chat4question|
+| chat4question | - |10| 20230325 | 是 | 用于进行题库扩充见studylist/projects/chat4question|
+| Scaling Instruction-Finetuned Language Models | - |0| 20230326 | 是 | 先学习一下吧|
 
 # 番外
 
