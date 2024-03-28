@@ -2,7 +2,9 @@
 
 ## 01 使用FLAN-T5
 
-NER_flant5
+NER_flan.py
+
+https://www.graphcore.ai/posts/flan-t5-sweet-results-with-the-smaller-more-efficient-llm
 
 output:
 ```text
