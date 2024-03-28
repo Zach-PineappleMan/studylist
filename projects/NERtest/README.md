@@ -13,3 +13,5 @@ English NER:
 Other language:
 [Công Ty]: Apple, [Năm Thành Lp]: 1976, [Ngi Sáng Lp]: Steve Jobs, [Năm Thành Lp]: Steve Wozniak,
 ```
+
+评价：input能输入的太短，output缺乏可控性
