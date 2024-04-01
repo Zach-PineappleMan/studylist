@@ -4,6 +4,7 @@
 |------------------|------------------------------------------------------------|---------|----------|-------|-------|
 | paddleNLP/NER | https://paddlenlp.readthedocs.io/zh/latest/data_prepare/overview.html | 30 | 之前|  否 | 已经能自主训练实体、关系的抽取，其他相关功能和范式都有所了解|
 |uie_pytorch|https://github.com/HUSTAI/uie_pytorch/tree/main|0|20240329|是|暂无|
+|XLM-RoBERTa|https://modelscope.cn/models/iic/nlp_xlmr_named-entity-recognition_viet-ecommerce-title|5|20240401|是|进行研究，主要为跨语种+NER，目前到了瓶颈，不太明白用from modelscope.pipelines如何转到huggingface的范式上，实在不行,基于XLM-RoBERTa-NER进行微调|
 | SIF              | https://github.com/PrincetonML/SIF/tree/master             | 100    | 20231205 | 是     |  内容已完成，任务效果不理想，仍需努力见：studylist/lunwenbiji/sif/ |
 | meta-transformer | https://github.com/invictus717/MetaTransformer/tree/master | 1       | 20231205 | 是     |   |
 | OneLLM           | https://github.com/csuhan/OneLLM/tree/main                 |  0      |  20231211| 是     |   |
